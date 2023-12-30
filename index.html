@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calc">
+        <form>
+            <h2>Basic Calculator</h2>
+            <div class="display">
+                <input type="text" name="display" readonly>
+            </div>
+            <div class="operators">
+                <input type="button" value="e" class="top-btn" onclick="showOnDisplay('e')">
+                <input type="button" value="%" class="top-btn" onclick="calculatePercentage()">
+                <input type="button" value="sin" class="top-btn" onclick="calculateSin()">
+                <input type="button" value="deg" class="top-btn" onclick="calculateDeg()">
+            </div>
+            <div class="operator">
+                <input type="button" value="Ac" onclick="display.value = '' ">
+                <input type="button" value="De" onclick="display.value = display.value.toString().slice(0,-1)">
+                <input type="button" value="/" class="op" onclick="showOnDisplay('/')">
+                <input type="button" value="*" class="op" onclick="showOnDisplay('*')">
+            </div>
+            <div class="operator">
+                <input type="button" value="7" class="num" onclick="showOnDisplay('7')">
+                <input type="button" value="8" class="num" onclick="showOnDisplay('8')">
+                <input type="button" value="9" class="num" onclick="showOnDisplay('9')">
+                <input type="button" value="-" class="op" onclick="showOnDisplay('-')">
+            </div>
+            <div class="operator">
+                <input type="button" value="4" class="num" onclick="showOnDisplay('4')">
+                <input type="button" value="5" class="num" onclick="showOnDisplay('5')">
+                <input type="button" value="6" class="num" onclick="showOnDisplay('6')">
+                <input type="button" value="+" class="plus" onclick="showOnDisplay('+')">
+            </div>
+            <div class="operator">
+                <input type="button" value="1" class="num" onclick="showOnDisplay('1')">
+                <input type="button" value="2" class="num" onclick="showOnDisplay('2')">
+                <input type="button" value="3" class="num" onclick="showOnDisplay('3')">
+            </div>
+            <div class="operator">
+                <input type="button" value="0" class="zero" onclick="showOnDisplay('0')">
+                <input type="button" value="." class="num" onclick="showOnDisplay('.')">
+                <input type="button" value="=" class="equals" onclick="Result()">
+            </div>
+        </form>
+    </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html> 
